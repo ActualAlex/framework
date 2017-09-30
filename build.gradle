@@ -19,6 +19,7 @@ dependencies {
 }
 task myTestFireFox(type: Test) {
     systemProperty "driver", "firefox"
+    testLogging.showStandardStreams=true
     useTestNG() {
         suites "src\\test\\resources\\testNG"
     }

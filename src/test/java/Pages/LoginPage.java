@@ -20,7 +20,14 @@ public class LoginPage extends BasePage {
 
 
     protected void login(String name, String password) {
-        inputLogin.sendKeys(name);
+        name.chars().forEach(s->{inputLogin.sendKeys(Character.toString((char)s));
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+
         inputPassword.sendKeys(password);
         btnLogin.click();
     }
