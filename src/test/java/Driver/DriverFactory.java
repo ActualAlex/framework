@@ -14,10 +14,10 @@ import static Common.Constants.BASE_URL;
 /**
  * Created by Alex on 19.09.2017.
  */
-public class DriverFactory {
-    public static WebDriver driver = null;
+ public class DriverFactory {
 
-    public static WebDriver getDriver() {
+    static WebDriver getDriver() {
+        WebDriver driver = null;
         String driverName = System.getProperty("driver");
         if ("firefox".equals(driverName)) {
             System.setProperty("webdriver.gecko.driver", "driver/geckodriver.exe");

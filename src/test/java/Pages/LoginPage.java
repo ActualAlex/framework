@@ -20,6 +20,7 @@ public class LoginPage extends BasePage {
 
 
     protected void login(String name, String password) {
+        log.info(String.format("Login user: -%s, password: -%s",name,password));
         name.chars().forEach(s->{inputLogin.sendKeys(Character.toString((char)s));
             try {
                 Thread.sleep(500);
